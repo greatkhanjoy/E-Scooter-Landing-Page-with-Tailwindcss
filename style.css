@@ -2698,28 +2698,16 @@ header {
   color: transparent;
 }
 
-.owl-item {
-  margin-left: 16px;
-}
-
-@media (min-width: 768px) {
-  .owl-item {
-    margin-left: 0px;
-  }
-}
+/* .owl-item {
+    @apply ml-[16px] md:ml-0;
+  } */
 
 .owl-nav {
   margin-top: 2.5rem;
-  display: none;
+  display: flex;
   justify-content: center;
   gap: 1.5rem;
   text-align: center;
-}
-
-@media (min-width: 768px) {
-  .owl-nav {
-    display: flex;
-  }
 }
 
 .owl-nav .fa-solid.fa-arrow-left-long,

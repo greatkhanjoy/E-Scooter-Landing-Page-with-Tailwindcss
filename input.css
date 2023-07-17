@@ -24,11 +24,11 @@ html {
     -webkit-text-stroke: 1px #42454a;
     @apply text-[105.21px] text-transparent font-calistoga;
   }
-  .owl-item {
+  /* .owl-item {
     @apply ml-[16px] md:ml-0;
-  }
+  } */
   .owl-nav {
-    @apply hidden md:flex text-center justify-center gap-6 mt-10;
+    @apply flex text-center justify-center gap-6 mt-10;
   }
   .owl-nav .fa-solid.fa-arrow-left-long,
   .owl-nav .fa-solid.fa-arrow-right-long {
