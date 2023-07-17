@@ -1,0 +1,16 @@
+{
+  "name": "e-scooter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "dev": "npx tailwindcss -i ./input.css -o ./style.css --watch",
+    "build": "npx tailwindcss -i ./input.css -o ./style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
+  }
+}
