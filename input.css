@@ -11,6 +11,9 @@ html {
 }
 
 @layer utilities {
+  header{
+    @apply sticky top-0 z-40 bg-white;
+  }
   .menu-item:hover {
     @apply bg-primary text-white rounded-sm transition-all ease-in-out duration-300;
   }
@@ -37,6 +40,16 @@ html {
   .user {
     width: 48px !important;
   }
+
+.slide-in {
+  transform: translateX(0);
+  transition: transform 0.3s ease-out;
+}
+
+.slide-out {
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-out;
+}
 
   h1 {
     font-size: 64px;

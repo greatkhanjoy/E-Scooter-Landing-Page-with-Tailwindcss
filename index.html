@@ -25,6 +25,41 @@
     <!--Header-->
     <header class="w-full border-b border-border">
       <div class="container mx-auto py-4">
+        <!--Mobile Menu-->
+        <div
+          id="mobile_menu"
+          class="bg-primary slide-out absolute top-0 left-0 w-full z-50 min-h-screen md:hidden"
+        >
+          <button
+            id="close_menu"
+            class="absolute top-6 right-6 text-white border border-white py-2 px-4 hover:bg-white hover:text-primary transition-colors duration-200"
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <ul class="flex flex-col justify-center text-white uppercase py-8">
+            <li class="px-3 py-3 hover:bg-gray-600">
+              <a href="#">Products</a>
+            </li>
+            <li class="px-3 py-3 hover:bg-gray-600">
+              <a href="#">Gallery</a>
+            </li>
+            <li class="px-3 py-3 hover:bg-gray-600">
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+          <div class="flex flex-col items-center gap-5 px-6">
+            <button
+              class="w-full px-8 py-4 rounded-md border border-white bg-white shadow-sm hover:bg-primary hover:text-white transition-colors duration-200"
+            >
+              LOG IN
+            </button>
+            <button
+              class="w-full bg-primary px-8 py-4 border border-white text-white rounded-md hover:bg-white hover:text-primary transition-colors duration-200"
+            >
+              SIGN UP
+            </button>
+          </div>
+        </div>
         <div class="flex justify-between items-center h-[74px] px-4 md:px-0">
           <div class="logo">
             <a href="#"><img src="./images/logo.png" alt="logo" /></a>
@@ -50,7 +85,7 @@
               SIGN UP
             </button>
           </div>
-          <button class="text-2xl md:hidden">
+          <button class="text-2xl md:hidden" id="open_menu">
             <i class="fa-solid fa-bars"></i>
           </button>
         </div>
@@ -61,62 +96,164 @@
       class="bg-[url('./images/bg.png')] bg-no-repeat bg-right-top bg-50% md:bg-right md:bg-365 lg:bg-auto py-20"
     >
       <div class="container mx-auto px-4 md:px-0">
-        <div class="flex flex-col-reverse md:flex-row">
-          <div
-            class="left flex flex-col items-center gap-5 md:items-start md:justify-between py-5 md:py-10"
-          >
-            <div>
-              <h1
-                class="text-center uppercase font-light text-[63.13px] leading-none md:text-left"
-              >
-                Let's ride
-              </h1>
-              <h1
-                class="text-center uppercase font-bold text-[63.13px] leading-none md:text-left"
-              >
-                the future.
-              </h1>
-            </div>
-            <span class="h-1 w-64 bg-primary"></span>
-            <p class="text-[15.43px] font-normal">
-              Simple and sleek design with users in mind.
-            </p>
-            <div class="flex justify-between gap-10">
-              <div class="flex gap-4 items-center">
-                <button
-                  class="bg-primary text-white py-3 px-4 border border-primary hover:bg-transparent hover:border hover:border-primary hover:text-primary"
+        <div class="hero_slider">
+          <!--Slider Item-->
+          <div class="hero_slide flex flex-col-reverse md:flex-row">
+            <div
+              class="left w-full md:w-1/3 flex flex-col items-center gap-5 md:items-start md:justify-between py-5 md:py-10"
+            >
+              <div>
+                <h1
+                  class="text-center uppercase font-light text-[63.13px] leading-none md:text-left"
                 >
-                  <i class="fa-solid fa-arrow-right-long"></i>
-                </button>
-                <p class="text-[14.3px]">Buy now</p>
+                  Let's ride
+                </h1>
+                <h1
+                  class="text-center uppercase font-bold text-[63.13px] leading-none md:text-left"
+                >
+                  the future.
+                </h1>
               </div>
-              <div class="flex gap-4 items-center">
-                <p class="text-[12.60px] font-medium w-20">
-                  Watch our video how it works
-                </p>
-                <img
-                  class="cursor-pointer"
-                  src="./images/play_button.png"
-                  alt="play"
-                />
+              <span class="h-1 w-64 bg-primary"></span>
+              <p class="text-[15.43px] font-normal">
+                Simple and sleek design with users in mind.
+              </p>
+              <div class="flex justify-between gap-10">
+                <div class="flex gap-4 items-center">
+                  <button
+                    class="bg-primary text-white py-3 px-4 border border-primary hover:bg-transparent hover:border hover:border-primary hover:text-primary"
+                  >
+                    <i class="fa-solid fa-arrow-right-long"></i>
+                  </button>
+                  <p class="text-[14.3px]">Buy now</p>
+                </div>
+                <div class="flex gap-4 items-center">
+                  <p class="text-[12.60px] font-medium w-20">
+                    Watch our video how it works
+                  </p>
+                  <img
+                    class="cursor-pointer"
+                    src="./images/play_button.png"
+                    alt="play"
+                  />
+                </div>
               </div>
             </div>
+            <div class="right w-full md:w-2/3">
+              <img src="./images/scooter.png" alt="hero" />
+            </div>
           </div>
-          <div class="right">
-            <img src="./images/scooter.png" alt="hero" />
+          <!--End Slider Item-->
+          <!--Slider Item-->
+          <div class="hero_slide flex flex-col-reverse md:flex-row">
+            <div
+              class="left w-full md:w-1/3 flex flex-col items-center gap-5 md:items-start md:justify-between py-5 md:py-10"
+            >
+              <div>
+                <h1
+                  class="text-center uppercase font-light text-[63.13px] leading-none md:text-left"
+                >
+                  Experience
+                </h1>
+                <h1
+                  class="text-center uppercase font-bold text-[63.13px] leading-none md:text-left"
+                >
+                  the future.
+                </h1>
+              </div>
+              <span class="h-1 w-64 bg-primary"></span>
+              <p class="text-[15.43px] font-normal">
+                Simple and sleek design with users in mind.
+              </p>
+              <div class="flex justify-between gap-10">
+                <div class="flex gap-4 items-center">
+                  <button
+                    class="bg-primary text-white py-3 px-4 border border-primary hover:bg-transparent hover:border hover:border-primary hover:text-primary"
+                  >
+                    <i class="fa-solid fa-arrow-right-long"></i>
+                  </button>
+                  <p class="text-[14.3px]">Buy now</p>
+                </div>
+                <div class="flex gap-4 items-center">
+                  <p class="text-[12.60px] font-medium w-20">
+                    Watch our video how it works
+                  </p>
+                  <img
+                    class="cursor-pointer"
+                    src="./images/play_button.png"
+                    alt="play"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="right w-full md:w-2/3">
+              <img src="./images/scooter-slide-1.png" alt="hero" />
+            </div>
           </div>
+          <!--End Slider Item-->
+          <!--Slider Item-->
+          <div class="hero_slide flex flex-col-reverse md:flex-row">
+            <div
+              class="left w-full md:w-1/3 flex flex-col items-center gap-5 md:items-start md:justify-between py-5 md:py-10"
+            >
+              <div>
+                <h1
+                  class="text-center uppercase font-light text-[63.13px] leading-none md:text-left"
+                >
+                  Embrace
+                </h1>
+                <h1
+                  class="text-center uppercase font-bold text-[63.13px] leading-none md:text-left"
+                >
+                  the future.
+                </h1>
+              </div>
+              <span class="h-1 w-64 bg-primary"></span>
+              <p class="text-[15.43px] font-normal">
+                Simple and sleek design with users in mind.
+              </p>
+              <div class="flex justify-between gap-10">
+                <div class="flex gap-4 items-center">
+                  <button
+                    class="bg-primary text-white py-3 px-4 border border-primary hover:bg-transparent hover:border hover:border-primary hover:text-primary"
+                  >
+                    <i class="fa-solid fa-arrow-right-long"></i>
+                  </button>
+                  <p class="text-[14.3px]">Buy now</p>
+                </div>
+                <div class="flex gap-4 items-center">
+                  <p class="text-[12.60px] font-medium w-20">
+                    Watch our video how it works
+                  </p>
+                  <img
+                    class="cursor-pointer"
+                    src="./images/play_button.png"
+                    alt="play"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="right w-full md:w-2/3">
+              <img src="./images/scooter-slide-2.png" alt="hero" />
+            </div>
+          </div>
+          <!--End Slider Item-->
         </div>
         <!--Slider Thumb-->
         <div
           class="hidden w-full gap-10 mt-2 md:-mt-5 justify-center md:flex md:justify-end"
         >
-          <span class="hero-numb">01</span>
+          <span id="slideNum" class="hero-numb">01</span>
           <div class="flex items-center">
-            <button class="border border-primary rounded-l-full py-3 px-6">
+            <button
+              id="prevButton"
+              class="border border-primary rounded-l-full py-3 px-6 hover:bg-primary hover:text-white transition-all duration-150"
+            >
               <i class="fa-solid fa-chevron-left"></i>
             </button>
             <button
-              class="border border-primary border-l-0 rounded-r-full py-3 px-6"
+              id="nextButton"
+              class="border border-primary border-l-0 rounded-r-full py-3 px-6 hover:bg-primary hover:text-white transition-all duration-150"
             >
               <i class="fa-solid fa-chevron-right"></i>
             </button>
@@ -364,7 +501,7 @@
           </div>
         </div>
         <button
-          class="font-bold text-[30px] block px-12 py-4 border border-primary rounded-md mt-20 mx-auto"
+          class="font-bold text-[30px] block px-12 py-4 border border-primary rounded-md mt-20 mx-auto hover:bg-primary hover:text-white transition-colors duration-200"
         >
           More Accessories Coming Soon
         </button>
@@ -391,22 +528,22 @@
             <img
               src="./images/thumb1.png"
               onclick="sliderImg('./images/slide-1.png')"
-              class="cursor-pointer w-20 md:w-32"
+              class="cursor-pointer w-20 hover:-translate-y-5 transition-transform duration-200 md:w-32"
             />
             <img
               src="./images/thumb2.png"
               onclick="sliderImg('./images/slide-2.png')"
-              class="cursor-pointer w-20 md:w-32"
+              class="cursor-pointer w-20 hover:-translate-y-5 transition-transform duration-200 md:w-32"
             />
             <img
               src="./images/thumb3.png"
               onclick="sliderImg('./images/slide-1.png')"
-              class="cursor-pointer w-20 md:w-32"
+              class="cursor-pointer w-20 hover:-translate-y-5 transition-transform duration-200 md:w-32"
             />
             <img
               src="./images/thumb4.png"
               onclick="sliderImg('./images/slide-2.png')"
-              class="cursor-pointer w-20 md:w-32"
+              class="cursor-pointer w-20 hover:-translate-y-5 transition-transform duration-200 md:w-32"
             />
           </div>
         </div>
@@ -533,7 +670,7 @@
             class="bg-[#FAFAFA] h-[80px] w-full text-primary p-8 text-[20px] rounded-md md:w-[400px]"
           />
           <button
-            class="bg-primary rounded-md w-[196px] px-6 text-white text-[20px]"
+            class="bg-primary rounded-md w-[196px] px-6 text-white text-[20px] border border-primary hover:bg-transparent hover:text-primary transition-colors duration-200"
           >
             Get start
           </button>
